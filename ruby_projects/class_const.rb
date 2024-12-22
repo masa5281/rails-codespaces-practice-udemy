@@ -1,4 +1,5 @@
 class Human
+  BIRTHPLACE = 'Japan'
   @@count = 0
   def initialize(name)
     @name = name
@@ -10,7 +11,7 @@ class Human
   end
 
   def self.info
-    puts "#{@@count} instance(s)"
+    puts "#{@@count} instance(s) Birthplace: #{BIRTHPLACE}"
   end
 end
 
@@ -25,3 +26,5 @@ Human.info
 woman = Human.new('chie')
 # woman.hello
 Human.info
+
+puts Human::BIRTHPLACE
