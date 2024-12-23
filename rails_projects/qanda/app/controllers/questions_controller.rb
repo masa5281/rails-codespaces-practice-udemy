@@ -9,10 +9,14 @@ class QuestionsController < ApplicationController
 
   # 質問の登録
   def new
+    @question = Question.new
   end
 
   # 質問の登録
   def create
+    @question = Question.new(question_params)
+    @question.save
+    redirect_to question_path(@question)
   end
 
   # 質問の編集
@@ -25,5 +29,10 @@ class QuestionsController < ApplicationController
 
   # 質問の削除
   def destroy
+  end
+
+  private
+  def question_params # モデル名_paramsが慣習
+    params.require(:question).permit(:title, :name, :content)
   end
 end

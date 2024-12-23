@@ -67,4 +67,10 @@ Rails.application.configure do
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+
+  config.hosts << "reimagined-succotash-v9g6g46x9wqh69g9-3000.app.github.dev" 
+  
+  config.action_controller.default_url_options = { host: "reimagined-succotash-v9g6g46x9wqh69g9-3000.app.github.dev", protocol: "https" }
+
+  config.action_controller.forgery_protection_origin_check = false
 end
