@@ -1,13 +1,12 @@
 class QuestionsController < ApplicationController
   # 質問一覧表示
   def index
+    @questions = Question.all
   end
 
   # 質問詳細ページ
   def show
-    # p params[:id]
     @question = Question.find(params[:id])
-    # p @question
   end
 
   # 質問の登録
