@@ -5,6 +5,9 @@ class QuestionsController < ApplicationController
 
   # 質問詳細ページ
   def show
+    # p params[:id]
+    @question = Question.find(params[:id])
+    # p @question
   end
 
   # 質問の登録
@@ -16,7 +19,7 @@ class QuestionsController < ApplicationController
   def create
     @question = Question.new(question_params)
     @question.save
-    redirect_to question_path(@question)
+    redirect_to @question
   end
 
   # 質問の編集
