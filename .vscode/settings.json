@@ -1,9 +1,0 @@
-{
-    "files.autoSave": "off",
-    "editor.tabSize": 2,
-    "emmet.includeLanguages": {
-        "erb": "html",
-        "html.erb": "html"
-    },
-    "emmet.triggerExpansionOnTab": true
-}
